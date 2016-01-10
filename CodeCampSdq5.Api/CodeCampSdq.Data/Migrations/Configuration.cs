@@ -34,7 +34,15 @@ namespace CodeCampSdq.Data.Migrations
                 Location = "FD-412"
             };
 
+            var sponsor = new Sponsor
+            {
+                Name = "Pizzahouse",
+                Url = "http://pizzahouse.org",
+                Level = 1,
+                LogoUrl = "http://codecampsdq.com/wp-content/uploads/2015/02/luis-e1448989493290.jpg"
+            };
             context.Sessions.AddOrUpdate(session);
+            context.Sponsors.AddOrUpdate(sponsor);
             context.SaveChanges();
         }
     }

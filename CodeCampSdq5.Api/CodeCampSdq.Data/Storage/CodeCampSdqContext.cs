@@ -15,6 +15,7 @@ namespace CodeCampSdq.Data.Storage
 
         public DbSet<Session> Sessions { get; set; }
         public DbSet<Speaker> Speakers { get; set; }
+        public DbSet<Sponsor> Sponsors { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
