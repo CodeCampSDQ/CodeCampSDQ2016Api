@@ -9,7 +9,7 @@ namespace CodeCampSdq5.Api.Controllers
         {
             var result = string.Empty;
 
-            var jsonFileName = @"sessions.json";
+            var jsonFileName = System.Web.Hosting.HostingEnvironment.MapPath(@"~/sessions.json");
 
             if (File.Exists(jsonFileName))
                 result = File.ReadAllText(jsonFileName);
