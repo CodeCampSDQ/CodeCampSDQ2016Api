@@ -19,6 +19,7 @@ namespace CodeCampSdq.Data
                 {
                     var speakers = context.Speakers.ToList();
                     var sessions = context.Sessions.ToList();
+                    var sponsors = context.Sponsors.ToList();
 
                     sessions.ForEach(x => x.Speaker = null);
                     speakers.ForEach(x => x.Sessions = null);
@@ -26,7 +27,8 @@ namespace CodeCampSdq.Data
                     var jsonData = new JsonData
                     {
                         Speakers = speakers,
-                        Sessions = sessions
+                        Sessions = sessions,
+                        Sponsors = sponsors
                     };
 
                     var jsonDataValue = JsonConvert.SerializeObject(jsonData, new JsonSerializerSettings()
