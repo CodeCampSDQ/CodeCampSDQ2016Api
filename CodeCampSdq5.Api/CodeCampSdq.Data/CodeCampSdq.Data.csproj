@@ -84,6 +84,10 @@
     <Compile Include="Migrations\201601101508569_SponsorSchema.Designer.cs">
       <DependentUpon>201601101508569_SponsorSchema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601112339092_SpeakerEmailField.cs" />
+    <Compile Include="Migrations\201601112339092_SpeakerEmailField.Designer.cs">
+      <DependentUpon>201601112339092_SpeakerEmailField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601101508569_SponsorSchema.resx">
       <DependentUpon>201601101508569_SponsorSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601112339092_SpeakerEmailField.resx">
+      <DependentUpon>201601112339092_SpeakerEmailField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
