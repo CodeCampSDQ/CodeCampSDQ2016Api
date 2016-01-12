@@ -36,7 +36,7 @@ namespace CodeCampSdq.Data
                         NullValueHandling = NullValueHandling.Ignore
                     });
 
-                    File.WriteAllText("sessions.json", jsonDataValue);
+                    File.WriteAllText(@"../../../CodeCampSdq5.Api/sessions.json", jsonDataValue);
 
                     Console.WriteLine("Data generation successfully.");
                 }

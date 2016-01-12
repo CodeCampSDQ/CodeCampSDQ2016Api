@@ -217,7 +217,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CodeCampSdq.Data\CodeCampSdq.Data.csproj">
+      <Project>{ed29c92e-2841-4f34-b216-7a2abcaa48f1}</Project>
+      <Name>CodeCampSdq.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
