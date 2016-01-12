@@ -26,6 +26,7 @@ namespace CodeCampSdq.Data.Migrations
         private IEnumerable<Session> GetSessions()
         {
             var result = new List<Session>();
+            
 
             #region Jonathan Montero
 
@@ -35,7 +36,7 @@ namespace CodeCampSdq.Data.Migrations
 
             var samba4 = BuildSession("Samba 4.0 como Active Directory",
                 @"Se mostrará como se puede prescindir de un Windows Server 2003/2008/2012 y obtener el mismo resultado con Software Libre.",
-                TimeSpan.Zero, TimeSpan.Zero, "", jonathanMontero);
+                TimeSpan.FromHours(8), TimeSpan.FromHours(9), "Sala 1", jonathanMontero);
 
             result.Add(samba4);
 
@@ -52,7 +53,7 @@ namespace CodeCampSdq.Data.Migrations
             var automatingPortabilityAnalysis =
                 BuildSession("Automating portability analysis and performance optimization of native code",
                     @"Software portability rarely receives systematic attention in the software development process. With the Web becoming a viable distribution platform for software, interest of migrating native code applications to the browser is growing. This presentation describes a study that aims to describe native code portability rules that allow for optimal computational performance when using Emscripten and Native Client to cross-compile to the Web with special attention to graphic accelerated applications. It introduces ConConJS, a diagnosis tool that evaluates graphics applications written using native code to target the Web as a platform.",
-                    TimeSpan.Zero, TimeSpan.Zero, "", raulRoa);
+                    TimeSpan.FromHours(9), TimeSpan.FromHours(10), "Sala 2", raulRoa);
 
             result.Add(automatingPortabilityAnalysis);
 
@@ -71,8 +72,8 @@ namespace CodeCampSdq.Data.Migrations
 
 Veremos algunas de las herramientas y acuerdos que nos provee Rails(generadores, scaffolding, ActiveRecord, convention over configuration, ciertas gemas, 'The Rails Way') para ayudarnos a desarrollar de manera rápida.
 
-Idealmente, trataríamos algo como 10 pedacitos de magia distintos que ilustren como Rails nos ayuda a desarrollar rápido con ejemplos de código para cada uno.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", davidHemmat);
+Idealmente, trataríamos algo como 10 pedacitos de magia distintos que ilustren como Rails nos ayuda a desarrollar rápido con ejemplos de código para cada uno.",
+                TimeSpan.FromHours(10), TimeSpan.FromHours(11), "Sala 3", davidHemmat);
 
             var frelanceando = BuildSession("Freelanceando 101",
                 @"Discutir primeros pasos para un Developer que quiere trabajar como freelancer.Un overview general de algunos temas importantes para un freelancer empezando.
@@ -80,8 +81,8 @@ Idealmente, trataríamos algo como 10 pedacitos de magia distintos que ilustren c
 - Como encontrar los primeros clientes
 - Como establecer una reputación
 - Como establecer un precio por servicios
-- Otras consideraciones", 
-                TimeSpan.Zero, TimeSpan.Zero, "", davidHemmat);
+- Otras consideraciones",
+                TimeSpan.FromHours(11), TimeSpan.FromHours(12), "Sala 4", davidHemmat);
 
             result.Add(frelanceando);
             result.Add(desarrolloRapidoRails);
@@ -106,8 +107,8 @@ Si conoces la plataforma.
 
 ¡Mucho mejor!Compartiremos conocimientos, refrescaras lo que sabes y aprenderás nuevas cosas que te ayudaran a llegar a otro nivel.
 
-Quiero compartir lo que he aprendido, seguir aprendiendo y  conocer personas que sientan pación por la plataforma.", 
-            TimeSpan.Zero, TimeSpan.Zero, "", arturoMejia);
+Quiero compartir lo que he aprendido, seguir aprendiendo y  conocer personas que sientan pación por la plataforma.",
+            TimeSpan.FromHours(12), TimeSpan.FromHours(13), "Sala 5", arturoMejia);
 
             result.Add(comoConvertirteEnAndroidExpert);
 
@@ -123,8 +124,8 @@ Quiero compartir lo que he aprendido, seguir aprendiendo y  conocer personas que
                 gh: "https://github.com/OnilPereyra");
 
             var skillsEveryStarupTn = BuildSession("Skills Every Startup Team Needs",
-                @"Landing a job at a promising startup is a lucrative opportunity. This talk is about how to make yourself attractive to the founders who could become the next titans of tech. ", 
-                TimeSpan.Zero, TimeSpan.Zero, "", onilPereyra);
+                @"Landing a job at a promising startup is a lucrative opportunity. This talk is about how to make yourself attractive to the founders who could become the next titans of tech. ",
+                TimeSpan.FromHours(13), TimeSpan.FromHours(14), "Sala 6", onilPereyra);
 
             result.Add(skillsEveryStarupTn);
 
@@ -142,8 +143,8 @@ Quiero compartir lo que he aprendido, seguir aprendiendo y  conocer personas que
             var tiendasECommerce = BuildSession("Desarollo de tiendas eCommerce con Shopify",
                 @"Esta charla resalta el importante rol que jugamos los developers en el desarrollo eCommerce y cómo los nuevos devs pueden insertarse en este mercado.
 
-Shopify como CMS para tiendas eCommerce presenta una solucion rapida y robusta para el desarrollo de tiendas eCommerce.Goza de amplia popularidad entre los clientes y administradores de tiendas online, pero y los developers ? Exploraremos las ventajas y desventajas de este CMS.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", mitraMejia);
+Shopify como CMS para tiendas eCommerce presenta una solucion rapida y robusta para el desarrollo de tiendas eCommerce.Goza de amplia popularidad entre los clientes y administradores de tiendas online, pero y los developers ? Exploraremos las ventajas y desventajas de este CMS.",
+                TimeSpan.FromHours(14), TimeSpan.FromHours(15), "Sala 7", mitraMejia);
 
             result.Add(tiendasECommerce);
 
@@ -167,8 +168,8 @@ The main problems we will deal through refactoring are:
 - Quick Fixes
 - Technical Debt
 
-This talk is aim at beginners developers willing to improve as software developers.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", leonardoJimenez);
+This talk is aim at beginners developers willing to improve as software developers.",
+                TimeSpan.FromHours(15), TimeSpan.FromHours(16), "Sala 8", leonardoJimenez);
 
             result.Add(refactoring);
 
@@ -183,8 +184,8 @@ This talk is aim at beginners developers willing to improve as software develope
                 li: "https://www.linkedin.com/in/raydelto-hernandez-53977a36", gh: "https://github.com/raydelto");
 
             var cocos = BuildSession("Desarrollo Rápido de Videojuegos Con Javascript y Cocos2d-x",
-                @"Hoy día existen muchas herramientas para crear videojuegos, todas tienen sus ventajas y desventajas. Esta charla te enseñará a  crear videojuegos utilizando solamente  un editor de texto y un browser como herramientas y posteriormente como empaquetar tu juego de manera nativa para las plataformas Android y iOS  utilizando como herramienta Cocos2d-x.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", raydelto);
+                @"Hoy día existen muchas herramientas para crear videojuegos, todas tienen sus ventajas y desventajas. Esta charla te enseñará a  crear videojuegos utilizando solamente  un editor de texto y un browser como herramientas y posteriormente como empaquetar tu juego de manera nativa para las plataformas Android y iOS  utilizando como herramienta Cocos2d-x.",
+                TimeSpan.FromHours(16), TimeSpan.FromHours(17), "Sala 9", raydelto);
 
             result.Add(cocos);
 
@@ -198,8 +199,8 @@ This talk is aim at beginners developers willing to improve as software develope
                 li: "https://www.linkedin.com/in/vivian-guillen-07299ab9", gh: "https://github.com/viviangb");
 
             var uiKit = BuildSession("UiKit - A better alternative to bootstrap",
-                @"Nowadays it’s very common to use a css framework to develop web applications, from MVP’s to full fledged production applications. The most used of these frameworks is Bootstrap. This talk aims to open the mind of the attendees to a particular alternative to bootstrap called UIkit and how it compares to other css frameworks.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", vivianGuillen); 
+                @"Nowadays it’s very common to use a css framework to develop web applications, from MVP’s to full fledged production applications. The most used of these frameworks is Bootstrap. This talk aims to open the mind of the attendees to a particular alternative to bootstrap called UIkit and how it compares to other css frameworks.",
+                TimeSpan.FromHours(17), TimeSpan.FromHours(18), "Sala 10", vivianGuillen); 
 
             result.Add(uiKit);
 
@@ -234,7 +235,7 @@ Durante el proceso pretendo explicar los siguientes conceptos:
 
 - Aplicacion desde cero en practica(Prefabricada y vista rapidamente commit tras commit)
   - Escrita sobre Node.js con NineJS y CouchDB",
-                    TimeSpan.Zero, TimeSpan.Zero, "", burguito);
+                    TimeSpan.FromHours(18), TimeSpan.FromHours(19), "Sala 11", burguito);
 
             result.Add(fileNewProject);
 
@@ -255,7 +256,8 @@ Especialmente:
 Testing en enfoques tradicionales
 Testing en enfoques ágiles
 
-Para la charla seria bueno que los participantes tengan pre instalado un trial de 30 de Días del HP UFT - QTP solo para el demo, pero ademas se mostraran otras alternativas.", TimeSpan.Zero, TimeSpan.Zero, "", julissaMateo); 
+Para la charla seria bueno que los participantes tengan pre instalado un trial de 30 de Días del HP UFT - QTP solo para el demo, pero ademas se mostraran otras alternativas.",
+                TimeSpan.FromHours(19), TimeSpan.FromHours(20), "Sala 12", julissaMateo); 
 
             
             result.Add(softwareTestingForDevelopers);
@@ -278,13 +280,13 @@ Breve explicación del acrónimo S.O.L.I.D.utilizando ejemplos de código, se reali
  * Segregación de Interfaces(Interface segregation)
  * Inversión de dependencias(Dependency inversion)
 
-Dado que los principios obedecen al paradigma de Orientación a Objetos, se utilizarán lenguajes como C# y/o Java en las demostraciones.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", lorenzoSolano);
+Dado que los principios obedecen al paradigma de Orientación a Objetos, se utilizarán lenguajes como C# y/o Java en las demostraciones.",
+                TimeSpan.FromHours(20), TimeSpan.FromHours(21), "Sala 13", lorenzoSolano);
 
 
             var systemThinkingAndSoftware = BuildSession("Systems Thinking and Software Craftsmanship: Una visión holística sobre la Ingeniería de Software",
                 @"Analiza la Ingeniería de Software en el contexto de la teoría de sistemas para aterrizar los problemas que presenta nuestra profesión en el país, conectando todo esto con la necesidad de pasar del empirismo y labor mecánica al profesionalismo (craftsmanship).", 
-                TimeSpan.Zero, TimeSpan.Zero, "", lorenzoSolano);
+                TimeSpan.Zero, TimeSpan.Zero, "Sala 13", lorenzoSolano);
 
             result.Add(systemThinkingAndSoftware);
             result.Add(solidPrinciples);
@@ -304,8 +306,8 @@ Dado que los principios obedecen al paradigma de Orientación a Objetos, se utili
 
 Te mostrare como salir de tu zona de confort y cambiar tu manera de pensar; como convertirte en un desarrollador remoto y que tools de la vida diaria necesitas para hacer que todos los días sean domingos :).
 
-Deja de esperar que las cosas pasen, sal ahi afuera y haz que pasen.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", luisRamirez); 
+Deja de esperar que las cosas pasen, sal ahi afuera y haz que pasen.",
+                TimeSpan.FromHours(14), TimeSpan.FromHours(15), "Sala 14", luisRamirez); 
 
             result.Add(cualEsElMiedo);
 
@@ -321,8 +323,8 @@ Deja de esperar que las cosas pasen, sal ahi afuera y haz que pasen.",
             var elPoderDeEmber = BuildSession("El poder de EmberJS",
                 @"Ember.js es un framework JavaScript, basado inicialmente en MVC(model - view - Controller).Esto permite a los desarrolladores crear SPA(single page aplication) incorporando un lenguaje común y el uso de mejores practicas dentro del framework.
 
-Ember es usado en diferentes sitios webs  pero también  es posible construir aplicaciones mobiles y de escritorio.El mas notable ejemplo de una aplicación de escritorio es Apple Music, una característica del Itune.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", davidContreras); 
+Ember es usado en diferentes sitios webs  pero también  es posible construir aplicaciones mobiles y de escritorio.El mas notable ejemplo de una aplicación de escritorio es Apple Music, una característica del Itune.",
+                TimeSpan.FromHours(15), TimeSpan.FromHours(16), "Sala 14", davidContreras); 
 
             result.Add(elPoderDeEmber);
 
@@ -337,8 +339,8 @@ Ember es usado en diferentes sitios webs  pero también  es posible construir apl
                 gp: "https://plus.google.com/111969940824885315915/posts");
 
             var domotica = BuildSession("Domotica",
-                @"Elektra fue mi proyecto ganador en Startup Weekend Santigo este año, consiste en domotizar las viviendad para de esa forma ahorrar energía, de que forma, la siguiente: instalando kits de comunicación blutue o wifi para que si se te olvida apagar el aire lo puedas hacer desde tu celular, si no apagaste el bombillo del baño, lo pueda apagar desde tu teléfono inteligente, cosas así, pues mi idea es presentar este proyecto en que hice en pequeña escala. ¿Como en pequeña escala? Pues hice una maquetado de como seria mi casa inteligente y así llevarlo a grande. Mi charla es motivar a los jóvenes con el tema de la electrónica y la programación ver que de la basura que recolecto como radio viejos, televisores, los mismos moden de comunicación a Internet se pueden hacer grandes cosas con la basura electrónica y de esa forma intuir y enseñar como lo hice.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", yelidiCaballero); 
+                @"Elektra fue mi proyecto ganador en Startup Weekend Santigo este año, consiste en domotizar las viviendad para de esa forma ahorrar energía, de que forma, la siguiente: instalando kits de comunicación blutue o wifi para que si se te olvida apagar el aire lo puedas hacer desde tu celular, si no apagaste el bombillo del baño, lo pueda apagar desde tu teléfono inteligente, cosas así, pues mi idea es presentar este proyecto en que hice en pequeña escala. ¿Como en pequeña escala? Pues hice una maquetado de como seria mi casa inteligente y así llevarlo a grande. Mi charla es motivar a los jóvenes con el tema de la electrónica y la programación ver que de la basura que recolecto como radio viejos, televisores, los mismos moden de comunicación a Internet se pueden hacer grandes cosas con la basura electrónica y de esa forma intuir y enseñar como lo hice.",
+                TimeSpan.FromHours(9), TimeSpan.FromHours(10), "Sala 15", yelidiCaballero); 
 
             result.Add(domotica);
 
@@ -355,8 +357,8 @@ Ember es usado en diferentes sitios webs  pero también  es posible construir apl
                 gh: "https://github.com/jgtaveras");
 
             var securingAspWebApi = BuildSession("Securing Asp.Net Web Api Like a Boss",
-                @"Asegurar tu api con un simple usuario y clave, ya no es suficiente. En esta charla vamos ver como podemos autenticar nuestro web api basado en OWIN, usando OAUTH y Json Web Tokens (JWT). Si no sabes que es nada de esto, tranquilo No previous experience required!!", 
-                TimeSpan.Zero, TimeSpan.Zero, "", joseGregorio); 
+                @"Asegurar tu api con un simple usuario y clave, ya no es suficiente. En esta charla vamos ver como podemos autenticar nuestro web api basado en OWIN, usando OAUTH y Json Web Tokens (JWT). Si no sabes que es nada de esto, tranquilo No previous experience required!!",
+                TimeSpan.FromHours(12), TimeSpan.FromHours(13), "Sala 15", joseGregorio); 
 
             result.Add(securingAspWebApi);
 
@@ -369,8 +371,8 @@ Ember es usado en diferentes sitios webs  pero también  es posible construir apl
                 twitter: "https://twitter.com/relsantana", fb: "http://t.co/uUimRZKMoR");
 
             var laVocacionDelProgramador = BuildSession("La vocación del programador",
-                @"Mónologo de Stand Up Comedy sobre lo cómico de ser desarrollador en la República Dominicana.", 
-                TimeSpan.Zero, TimeSpan.Zero, "", arielSantana); 
+                @"Mónologo de Stand Up Comedy sobre lo cómico de ser desarrollador en la República Dominicana.",
+                TimeSpan.FromHours(15), TimeSpan.FromHours(16), "Sala 15", arielSantana); 
 
             result.Add(laVocacionDelProgramador);
 
@@ -378,6 +380,9 @@ Ember es usado en diferentes sitios webs  pero también  es posible construir apl
 
             return result;
         }
+        
+        
+
 
         private Session BuildSession(string name, string description, TimeSpan startTime, TimeSpan endTime,
             string location, Speaker speaker)
@@ -394,8 +399,7 @@ Ember es usado en diferentes sitios webs  pero también  es posible construir apl
 
             return result;
         }
-        
-           
+                
         private Speaker BuildSpeaker(string name, string bio = "", string url = "", string photoUrl = "", string twitter = "", 
             string fb = "", string gp = "", string li = "", string gh = "", string email = "")
         {
