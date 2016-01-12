@@ -7,7 +7,7 @@ namespace CodeCampSdq5.Api.Controllers
 {
     public class CodeCampSdqController : ApiController
     {
-        public JsonData GetSessions()
+        public JsonData GetData()
         {
             var rawData = string.Empty;
 
