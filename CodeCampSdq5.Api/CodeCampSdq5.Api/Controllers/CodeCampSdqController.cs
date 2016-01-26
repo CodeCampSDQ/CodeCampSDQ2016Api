@@ -1,29 +1,28 @@
-﻿using System.IO;
+﻿using System.Data.Entity;
+using System.Threading.Tasks;
 using System.Web.Http;
 using CodeCampSdq.Data.Dto;
-using Newtonsoft.Json;
+using CodeCampSdq.Data.Storage;
 
 namespace CodeCampSdq5.Api.Controllers
 {
     public class CodeCampSdqController : ApiController
     {
-        public JsonData GetData()
+        public async Task<JsonData> GetData()
         {
-            var rawData = string.Empty;
-
-            var jsonFileName = System.Web.Hosting.HostingEnvironment.MapPath(@"~/sessions.json");
-
-            if (File.Exists(jsonFileName))
-                rawData = File.ReadAllText(jsonFileName);
-
-            if (string.IsNullOrWhiteSpace(rawData)) return null;
-
-            var result = JsonConvert.DeserializeObject<JsonData>(rawData, new JsonSerializerSettings()
+            using (var context = new CodeCampSdqContext())
             {
-                NullValueHandling = NullValueHandling.Ignore
-            });
+                var result = new JsonData
+                {
+                    Sessions = await context.Sessions.ToListAsync(),
+                    Speakers = await context.Speakers.ToListAsync()
+                };
 
-            return result;
+                result.Speakers.ForEach(x => x.Sessions = null);
+                result.Sessions.ForEach(x => x.Speaker = null);
+
+                return result;
+            }
         }
     }
 }
